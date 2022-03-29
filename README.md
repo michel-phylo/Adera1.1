@@ -1,2 +1,17 @@
 # Adera1.1
-This is a question answer drug repurposing software
+Adera1.1 is a question-answer drug repurposing software. The primary task of this software is to repurpose relevant known drugs published in the literature for a  particular disease specified by the user. The current workflow of Adera1.1.1 is as follows:\
+
+a)  The search input includes a query question and a disease.  Based on these two inputs, Adera1.1  searches PUBMED for medications. It then downloads the abstract and the PubMed ID a specific number of times. \
+ b) Then, it extracts the keywords from each abstract. Subsequently, it downloads full pdfs of the articles relevant to the query question. It also filters out the articles that already cover the disease specified. This step ensures that the purposed medications have not been published as drugs for the particular disease. \
+c) After that, using an AI encoder, the software embeds all the sentences in each downloaded pdf together with the query question. Finally, it calculates the relevance between each sentence and the query question.\
+d) Sentences with the highest relevance are shown on the screen to the user. \
+e) In Adera1.2 a wrapper will be added using python tinker and Docker.\
+ 
+# Install for ubuntu 
+To install Adera1.1, follow the normal procdure to install a git reporsitory. i.e by doing the following :
+```
+sudo apt-get update
+sudo apt-get install git
+git clone https://github.com/michel-phylo/Adera1.1
+python3 macrious_adera_29_march.py
+```
