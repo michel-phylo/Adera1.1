@@ -20,7 +20,10 @@ python3 macrious_adera_29_march.py
 # Installing on macOS
 The easiest way is  to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this  by trying to run git from the Terminal the very first time abd then follow the interactive dialogue.
 ```
-$ git --version
+git --version
+git clone https://github.com/michel-phylo/Adera1.1
+python3 adera1_req.py
+python3 macrious_adera_29_march.py
 ```
 
 
