@@ -26,12 +26,21 @@ python3 adera1_req.py
 python3 macrious_adera_29_march.py
 ```
 
+# Installinf for windows
+First you would need to install git on windows.You can try https://git-scm.com/downloads and follow the instructions. After that, you just clone the git repo and run it as follows
+```
+git --version
+git clone https://github.com/michel-phylo/Adera1.1
+python3 adera1_req.py
+python3 macrious_adera_30_march.py
+```
+
 
 # Tutorial
 The software interactive mode is pretty straight forward. \
 First you need to run the command 
 ```
-python3 macrious_adera_29_march.py
+python3 macrious_adera_30_march.py
 ```
 An interactive dialogue will appear. 
 please enter a search term: what are the drugs used to regulate Nrf2 function\
