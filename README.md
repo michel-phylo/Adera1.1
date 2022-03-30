@@ -7,7 +7,7 @@ c) After that, using an AI encoder, the software embeds all the sentences in eac
 d) Sentences with the highest relevance are shown on the screen to the user. \
 e) In Adera1.2 a wrapper will be added using python tinker and Docker.\
  
-# Install for ubuntu 
+# Installing on ubuntu 
 To install Adera1.1, follow the normal procdure to install a git reporsitory. i.e by doing the following :
 ```
 sudo apt-get update
