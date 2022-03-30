@@ -29,7 +29,7 @@ python3 macrious_adera_29_march.py
 
 # Tutorial
 The software interactive mode is pretty straight forward. \
-First you need to run the command \
+First you need to run the command 
 ```
 python3 macrious_adera_29_march.py
 ```
@@ -39,6 +39,8 @@ please enter a disease to purpose to :brain \
 please enter a name for your database:mkr1.json\
 
 
+# Future release
+This month, God's willing ! we will release the next version, which is docker enabled. And will be fully interactive python based GUI.
 
 
 
