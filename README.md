@@ -26,7 +26,7 @@ python3 adera1_req.py
 python3 macrious_adera_29_march.py
 ```
 
-# Installinf for windows
+# Installing for windows
 First you would need to install git on windows.You can try https://git-scm.com/downloads and follow the instructions. After that, you just clone the git repo and run it as follows
 ```
 git --version
