@@ -15,3 +15,28 @@ sudo apt-get install git
 git clone https://github.com/michel-phylo/Adera1.1
 python3 macrious_adera_29_march.py
 ```
+
+# Installing on macOS
+The easiest way is  to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this  by trying to run git from the Terminal the very first time abd then follow the interactive dialogue.
+```
+$ git --version
+```
+
+
+# Tutorial
+The software interactive mode is pretty straight forward. \
+First you need to run the command \
+```
+python3 macrious_adera_29_march.py
+```
+An interactive dialogue will appear. 
+please enter a search term: what are the drugs used to regulate Nrf2 function\
+please enter a disease to purpose to :brain \
+please enter a name for your database:mkr1.json\
+
+
+
+
+
+
+
