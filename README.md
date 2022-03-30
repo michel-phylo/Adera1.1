@@ -13,6 +13,7 @@ To install Adera1.1, follow the normal procdure to install a git reporsitory. i.
 sudo apt-get update
 sudo apt-get install git
 git clone https://github.com/michel-phylo/Adera1.1
+python3 adera1_req.py
 python3 macrious_adera_29_march.py
 ```
 
