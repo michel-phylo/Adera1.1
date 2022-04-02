@@ -68,7 +68,8 @@ for x in range(1, len(abstracts_adera)):
       #else:
         #kkr.append(keywords_adera)
 
-print(kkr)
+#print(kkr)
+print("adera2")
 
 ##3until here the output is the keywords of each abstract
 import numpy as np
@@ -92,8 +93,8 @@ else:
     mkr5=np.delete(mkr4, result2_adera).tolist()
 
 
-print(mkr5)
-
+#print(mkr5)
+print("adera3")
 mkr5d= ",".join([str(elem) for elem in mkr5])
 print("mkr5d =", mkr5d)
 text_file_adera="adera4_results.txt"
@@ -406,17 +407,17 @@ z0a=model.predict(z0)
 
 results = []
 #for n in range(0,len(datastore['data'])):
-for n in range(3,3):
+for n in range(0,10):
 #z1=np.random.randint(1, size=(2, 4,1))
   z1=message_embeddings[n].reshape(1,128,4,1)
   z1mkr=model.predict(z1)
   m1 = mse(z0, z1mkr)
-  print("this is data in datastore",n)
-  print(datastore [n]['data']) # this is cobined data from the question and a pdf number 3
-  print("m1",m1)
+  #print("this is data in datastore",n)
+  #print(datastore [n]['data']) # this is cobined data from the question and a pdf number 3
+  #print(m1)
   #results.append(datastore['data'][n])
   results.append(m1)
-print("results",results)
+#print("results",results)
 np.hstack(results)
 def merge(list1, list2): 
       
