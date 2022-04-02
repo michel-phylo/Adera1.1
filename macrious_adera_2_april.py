@@ -1,9 +1,9 @@
 
 
-Adera program, this program aims to take the search input from the user and downalod the PUBMED id INDEX FOR THEM. Then it extrcats the keywords from it and  only downlaods the terms that ahve got one of the key words but not the other.
-The second phases of the search will be done in the sesond part which includes parsing the files and generating compound names.
-The third phase coming month is building a wrapper that the user can inetrcat with.
-"""
+#Adera program, this program aims to take the search input from the user and downalod the PUBMED id INDEX FOR THEM. Then it extrcats the keywords from it and  only downlaods the terms that ahve got #one of the key words but not the other.
+#The second phases of the search will be done in the sesond part which includes parsing the files and generating compound names.
+#The third phase coming month is building a wrapper that the user can inetrcat with.
+
 
 
 
@@ -108,7 +108,7 @@ from fstrings import f
 print("mkr5d",mkr5d)
 import os
 os.system(f'python3 fetch_pdfs.py -pmids {mkr5d}')
-os.chdir('/fetched_pdfs')
+os.chdir('fetched_pdfs')
 
 arr_adera = os.listdir()
 print("arr_adera =", arr_adera)
@@ -140,8 +140,8 @@ import tika
 
 
 
-path_adera= '/fetched_pdfs'
-kyrillos_name1=os.listdir(path_adera)[0]
+path_adera= 'fetched_pdfs'
+kyrillos_name1=os.listdir()[0]
 new_file_name=kyrillos_name1
 raw1= parser.from_file(new_file_name)
 import nltk.data
@@ -157,7 +157,7 @@ b1=sent_tokenize(data1)
 #print(b1)
 print("now we have tokenized_adera2")
 import pandas 
-#need to add a question for the user to choose a name for the json folder
+
 
 ############# write the json database 
 file_folder_mkr= name_of_json_adera
@@ -207,6 +207,7 @@ grata = [brata]
 #Adera[1]
 import os
 
+path_adera=os.getcwd()
 onlyfiles = next(os.walk(path_adera))[2] #dir is your directory path as string
 kk=len(onlyfiles)
 for i in range(1,kk): 
@@ -230,8 +231,6 @@ import gc
 gc.collect()
 
 import json
-
-
 import pandas 
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -249,9 +248,7 @@ nltk.download('punkt')
 from keras import backend
 from keras.layers import Activation, Dense, Input, Subtract
 from keras.models import Model
-
 from absl import logging
-
 #import tensorflow as tf
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
@@ -292,7 +289,7 @@ import json
 sentence=keyword_macrious
 with open(name_of_json_adera,'r') as f:    
           datastore = json.load(f)
-for n in range(5,6):#,len(datastore)):
+for n in range(0,6):#,len(datastore)):
     print(n)
     paragraph=datastore[n]['data']
     a5=paragraph
@@ -325,13 +322,114 @@ for i in range(1,len(message_embeddings)):
     kr4=1 - distance.cosine (kr1,kr2)
     kr3.append(kr4)
 
-kr3.sort() # this is some numerical values represneting cosine distance
+kr8=kr3.sort() # this is some numerical values represneting cosine distance
 #print(kr3) # this is a column of numbers
 #kr5b = kr3.index(kr3[-1])
 #print('kr5b',kr5b)
 #datastore[3]['data'][kr5b]
 
-for j in range(1,10):
-   kr5b = kr3.index(kr3[-j])
-   print(kr5b)
-   print(datastore[5]['data'][kr5b]) # the number in bracktes is the number  of the pdf being cheked
+#for j in range(1,10):
+  # kr5b = kr8.index(kr3[-j])
+   #print(kr5b)
+  # print(datastore[5]['data'][kr5b]) 
+# the number in bracktes is the number  of the pdf being checked
+
+from sh import cd, ls
+
+cd ("..")
+with open('3ad1relevance_test_database.json','r') as f:     
+    dataspore = json.load(f)
+    print(dataspore)
+    dataspore['data'][5]
+    b5=dataspore['data']
+    kessages=b5
+print(kessages)
+
+
+
+with tf.Session() as session:
+        session.run([tf.global_variables_initializer(), tf.tables_initializer()])
+        kessage_embeddings = session.run(embed(kessages))
+        print(kessages)
+        print(kessage_embeddings.shape)
+        print(kessage_embeddings)
+
+
+print(kessages [0])
+print(kessage_embeddings.shape)
+
+
+#this function calculates similairty 
+def mse(imageA, imageB):
+	# the 'Mean Squared Error' between the two images is the
+	# sum of the squared difference between the two images;
+	# NOTE: the two images must have the same dimension
+	err = np.sum((imageA.astype("float") - imageB.astype("float")) ** 2)
+	err /= float(imageA.shape[0] * imageA.shape[1])
+	
+	# return the MSE, the lower the error, the more "similar"
+	# the two images are
+	return err
+
+
+
+#second solution
+from sklearn.model_selection import train_test_split
+x_mkr=kessage_embeddings[0::2]
+y_mkr=kessage_embeddings[1::2]
+X_train,X_test,y_train,y_test=train_test_split(x_mkr,y_mkr,test_size=0.2)
+X_test
+X_train=X_train.reshape(3,128,4,1)
+y_train=y_train.reshape(3,128,4,1)
+X_test=X_test.reshape(1,128,4,1)
+y_test=y_test.reshape(1,128,4,1)
+from keras.models import Sequential #need to know how to add more layers
+from keras.layers import Dense, Conv2D, Conv3D,Flatten,Conv1D
+#create model
+model = Sequential()
+#add model layers
+#model.add.Conv1D(2#, kernel_size, strides=1, padding='valid', data_format='channels_last', dilation_rate=1, )
+model.add(Conv2D(2, (1, 1), activation='relu', input_shape=( 128, 4, 1)))
+#model.add(Conv3D(1,kernel_size=3,Input(batch_shape=( 128, 4, 1))))
+#model.add(Flatten())
+model.add(Dense(1, activation='sigmoid'))
+#compile model using accuracy to measure model performance
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+
+model.fit(X_train, y_train,epochs=5,verbose=1,validation_data=(X_test, y_test))
+
+
+z0=message_embeddings[0].reshape(1,128,4,1)
+z0a=model.predict(z0)
+
+
+results = []
+#for n in range(0,len(datastore['data'])):
+for n in range(3,3):
+#z1=np.random.randint(1, size=(2, 4,1))
+  z1=message_embeddings[n].reshape(1,128,4,1)
+  z1mkr=model.predict(z1)
+  m1 = mse(z0, z1mkr)
+  print("this is data in datastore",n)
+  print(datastore [n]['data']) # this is cobined data from the question and a pdf number 3
+  print("m1",m1)
+  #results.append(datastore['data'][n])
+  results.append(m1)
+print("results",results)
+np.hstack(results)
+def merge(list1, list2): 
+      
+    merged_list = [(list1[i], list2[i]) for i in range(0, len(list1))] 
+    return merged_list 
+#c2=merge(results,datastore['data'])
+c2=merge(results,datastore[3]['data'])
+
+c2.sort(reverse=False)
+#print(c2)
+#c2
+import pandas
+
+# Creating a dataframe object from listoftuples
+dfObj = pd.DataFrame(c2)
+print(dfObj)
