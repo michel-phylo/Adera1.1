@@ -15,7 +15,8 @@ dependencies = [
     'chainer>=7.8.1',
     'matplotlib>=3.5.1',
     'numpy>= 1.20.2',
-    'keras>=2.8.0'
+    'keras>=2.8.0',
+     'sh>==1.14.2'
 ]
 
 # here, if a dependency is not met, a DistributionNotFound or VersionConflict
