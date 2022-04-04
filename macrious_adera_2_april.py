@@ -1,8 +1,15 @@
 
 
-#Adera program, this program aims to take the search input from the user and downalod the PUBMED id INDEX FOR THEM. Then it extrcats the keywords from it and  only downlaods the terms that ahve got #one of the key words but not the other.
-#The second phases of the search will be done in the sesond part which includes parsing the files and generating compound names.
-#The third phase coming month is building a wrapper that the user can inetrcat with.
+#Adera is a question-answer drug repurposing software. Its main workflow includes
+#taking the two search inputs. The first is the pathways or diseases needed to repurpose from.
+#the other one is the pathway or disease that needed to be repurposed to.
+#The software then downloads the PUBMED ID INDEX for the first query (e.g., repurposed from). Then it extracts the keywords from it and 
+#only downloads the terms that have does not have a semantic relationship with the second query( repurposed to).
+#then the software downloads the relevant Pdfs based on the results of the last step.
+#The program then uses two AI networks. the first calculates the embedding (numerical representation of each sentence in the downloaded Pdfs.
+# The second network calculates the relevance.
+#the output of the software is a table showing sorted answers from one pdfs of or multiple pdfs
+#In the upcoming release the software will include the GUI direct interface and PyPI
 
 
 
