@@ -138,7 +138,7 @@ import gc
 gc.collect()
 
 import nltk
-#nltk.download('punkt')
+nltk.download('punkt')
 #import textract
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
