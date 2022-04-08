@@ -31,7 +31,7 @@ from pkg_resources import DistributionNotFound, VersionConflict
 #pip3 install --quiet seaborn
 #pip3 install --quiet chainer
 import os
-#os.system('pip install metapub')
+os.system('pip install metapub')
 
 
 keyword_macrious= input("please enter a search term :  ")
