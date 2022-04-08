@@ -22,6 +22,7 @@ The easiest way is  to install the Xcode Command Line Tools. On Mavericks (10.9)
 ```
 git --version
 git clone https://github.com/michel-phylo/Adera1.1
+cd Adera1.1
 python3 adera1_req.py
 python3 macrious_adera_2_april.py
 ```
