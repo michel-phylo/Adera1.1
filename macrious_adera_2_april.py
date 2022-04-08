@@ -30,6 +30,7 @@ from pkg_resources import DistributionNotFound, VersionConflict
 #pip3 install --quiet tensorflow-hub
 #pip3 install --quiet seaborn
 #pip3 install --quiet chainer
+#pip3 install bs4
 import os
 #os.system('pip3 install metapub')
 os.makedirs("fetched_pdfs")
