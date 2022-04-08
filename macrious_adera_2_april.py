@@ -431,7 +431,7 @@ z0a=model.predict(z0)
 
 results = []
 #for n in range(0,len(datastore['data'])):
-for n in range(0,5):
+for n in range(0,10):
 #z1=np.random.randint(1, size=(2, 4,1))
   z1=message_embeddings[n].reshape(1,128,4,1)
   z1mkr=model.predict(z1)
