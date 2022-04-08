@@ -33,7 +33,22 @@ from pkg_resources import DistributionNotFound, VersionConflict
 #pip3 install bs4
 import os
 #os.system('pip3 install metapub')
-os.makedirs("fetched_pdfs")
+
+
+
+import os
+
+path = '/Users/krunal/Desktop/code/database'
+
+# Check whether the specified path exists or not
+isExist = os.path.exists("fetched_pdfs")
+
+if not isExist:
+  
+  # Create a new directory because it does not exist 
+  os.makedirs("fetched_pdfs")
+  print(""fetched_pdfs created..Thank God")
+#os.makedirs("fetched_pdfs")
 
 
 keyword_macrious= input("please enter a search term :  ")
