@@ -32,6 +32,7 @@ from pkg_resources import DistributionNotFound, VersionConflict
 #pip3 install --quiet chainer
 import os
 os.system('pip3 install metapub')
+os.makedirs("fetched_pdfs")
 
 
 keyword_macrious= input("please enter a search term :  ")
