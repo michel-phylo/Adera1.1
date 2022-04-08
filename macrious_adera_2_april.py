@@ -47,7 +47,7 @@ if not isExist:
   
   # Create a new directory because it does not exist 
   os.makedirs("fetched_pdfs")
-  print(""fetched_pdfs created..Thank God")
+  print("fetched_pdfs created..Thank God")
 #os.makedirs("fetched_pdfs")
 
 
