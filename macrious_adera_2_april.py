@@ -38,7 +38,7 @@ import os
 
 import os
 
-path = '/Users/krunal/Desktop/code/database'
+
 
 # Check whether the specified path exists or not
 isExist = os.path.exists("fetched_pdfs")
