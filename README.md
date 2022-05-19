@@ -15,7 +15,7 @@ sudo apt-get install git
 git clone https://github.com/michel-phylo/Adera1.1
 cd Adera1.1
 python3 adera1_req.py
-python3 macrious_adera_2_april.py
+python3 adera_tinker_19_may.py
 ```
 
 # Installing on macOS
@@ -25,7 +25,7 @@ git --version
 git clone https://github.com/michel-phylo/Adera1.1
 cd Adera1.1
 python3 adera1_req.py
-python3 macrious_adera_2_april.py
+python3 adera_tinker_19_may.py
 ```
 
 # Installing for windows
@@ -42,7 +42,7 @@ python3 macrious_adera_2_april.py
 The software interactive mode is pretty straight forward. \
 First you need to run the command 
 ```
-python3 macrious_adera_2_april.py
+python3 adera_tinker_19_may.py
 ```
 An interactive dialogue will appear. 
 please enter a search term: what are the drugs used to regulate Nrf2 function\
