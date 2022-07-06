@@ -50,13 +50,13 @@ please enter a disease to purpose to :brain \
 please enter a name for your database:mkr1.json\
 
 # Exe-based program
-To make the program accessible for usage, we created two exe options
-(i) option one, the program was converted to exe-based software, so people do not need to learn python or coding to use it. However, the program is quite large because of tensor flow. We will upload it here shortly.
-(ii) The second option the software workflow is divided into four exe-based programs
-a) The first program could be used to search PubMed and other science-based websites for PDFs that could carry the answer to the user's question
-b) The second program is concerned with fetching the PDF. It could be used alone or in conjunction with the previous step
-c) The third program is concerned with parsing the downloaded pdf and converting them into a JSON-based database.
-d) the fourth program is concerned with calculating the final results and presenting the answers to the user.
-We will upload the programs to different branches, so they are avaiubale for download by interested users.
+To make the program accessible for usage, we created two exe options\
+(i) option one, the program was converted to exe-based software, so people do not need to learn python or coding to use it. However, the program is quite large because of tensor flow. We will upload it here shortly.\
+(ii) The second option the software workflow is divided into four exe-based programs\
+a) The first program could be used to search PubMed and other science-based websites for PDFs that could carry the answer to the user's question\
+b) The second program is concerned with fetching the PDF. It could be used alone or in conjunction with the previous step\
+c) The third program is concerned with parsing the downloaded pdf and converting them into a JSON-based database.\
+d) the fourth program is concerned with calculating the final results and presenting the answers to the user.\
+We will upload the programs to different branches, so they are avaiubale for download by interested users.\
 
 
